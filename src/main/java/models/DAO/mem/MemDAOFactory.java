@@ -4,7 +4,7 @@ import models.DAO.DAOFactory;
 import models.DAO.RoundDAO;
 import models.DAO.UserDAO;
 
-public class MemDAOFactory extends DAOFactory{
+public class MemDAOFactory extends DAOFactory {
 
     @Override
     public RoundDAO getRoundDAO() {

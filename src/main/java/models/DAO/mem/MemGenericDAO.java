@@ -5,10 +5,10 @@ import java.util.Map;
 
 import models.DAO.GenericDAO;
 
-public abstract class MemGenericDAO<T, ID> implements GenericDAO<T, ID>{
+public abstract class MemGenericDAO<T, ID> implements GenericDAO<T, ID> {
 
     private Map<ID, T> mapa = new HashMap<ID, T>();
-    
+
     public abstract ID getId(T entity);
 
     @Override
@@ -45,7 +45,7 @@ public abstract class MemGenericDAO<T, ID> implements GenericDAO<T, ID>{
 
     @Override
     public Map<ID, T> findAll(int index, int size) {
-        return null;
+        return mapa;
     }
 
 }

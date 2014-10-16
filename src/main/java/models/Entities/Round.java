@@ -1,10 +1,10 @@
 package models.Entities;
 
 public class Round {
-    
+
     private int id;
-    
-    public int getId(){
+
+    public int getId() {
         return this.id;
     }
 
