@@ -9,7 +9,7 @@ public abstract class MemGenericDAO<T, ID> implements GenericDAO<T, ID> {
 
     private Map<ID, T> mapa = new HashMap<ID, T>();
 
-    public abstract ID getId(T entity);
+    protected abstract ID getId(T entity);
 
     @Override
     public void create(T entity) {
