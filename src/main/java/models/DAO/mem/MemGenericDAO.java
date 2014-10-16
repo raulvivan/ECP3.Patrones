@@ -1,6 +1,8 @@
 package models.DAO.mem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import models.DAO.GenericDAO;
@@ -39,13 +41,15 @@ public abstract class MemGenericDAO<T, ID> implements GenericDAO<T, ID> {
     }
 
     @Override
-    public Map<ID, T> findAll() {
-        return mapa;
+    public List<T> findAll() {
+        return new ArrayList<T>(mapa.values());
     }
 
     @Override
-    public Map<ID, T> findAll(int index, int size) {
-        return mapa;
+    public List<T> findAll(int index, int size) {
+        List<T> lista = this.findAll();
+        
+        return lista.subList(index, size);
     }
 
 }

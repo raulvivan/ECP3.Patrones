@@ -1,6 +1,6 @@
 package models.DAO;
 
-import java.util.Map;
+import java.util.List;
 
 public interface GenericDAO<T, ID> {
 
@@ -14,8 +14,8 @@ public interface GenericDAO<T, ID> {
 
     public void deleteById(ID id);
 
-    public Map<ID, T> findAll();
+    public List<T> findAll();
 
-    public Map<ID, T> findAll(int index, int size);
+    public List<T> findAll(int index, int size);
 
 }
